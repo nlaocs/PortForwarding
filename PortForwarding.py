@@ -3,15 +3,15 @@ from tkinter import ttk
 import threading
 import socket
 
-# デフォルトのポート設定（変更可能）
-default_source_port = " "
-default_target_port = "61550"
+default_source_port = ""
+default_target_port = "40000"
 
 if __name__ == '__main__':
     root = tk.Tk()
     root.title('ポートフォワーディングツール')
+    root.geometry("300x210")
+    root.resizable(width=False, height=False)
 
-    # 元のポートと使用したいポートの変数を定義
     source_port_var = tk.StringVar()
     source_port_var.set(str(default_source_port))
     target_port_var = tk.StringVar()
